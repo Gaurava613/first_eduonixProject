@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        padding: 0%;
+        margin: 0%;
+        background: rgb(190, 188, 188);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 13rem;
+    }
+    #secCont {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background: rgb(225, 151, 23);
+        height: 90%;
+        width: 100%;
+        padding: 3rem;
+        border-radius: 10px;
+
+
+
+    }
+    #secForClickWelcomeMsg{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+    }
+    p{
+        font-size: 2rem;
+    }
+    #secForTakeData{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        
+    }
+    input{
+        border: none;
+        background: rgb(209, 204, 204);
+        padding: 10px;
+        border-radius: 5px;
+        font-size: 1rem;
+    }
+    button{
+        border: none;
+        padding: 20px;
+        border-radius: 5px;
+        font-size: 2rem;
+        background: green;
+        color: white;
+    }
+</style>
+
+<body>
+    <div id="mainSec">
+        <div id="secCont">
+            <div id="secOne">
+                <div id="secForClickWelcomeMsg">
+                    <button onclick="clickForMsg()">
+                        CLICK FOR WELCOME MESSAGE
+                    </button>
+                    <p id="pushMsg"></p>
+                </div>
+
+            </div>
+            <div id="secTwo">
+                <div id="secForTakeData">
+                    <div id="dataSec">
+                        <input id="firstName" type="text" placeholder="First Name">
+                        <input id="middleName" type="text" placeholder="Middle Name">
+                        <input id="lastName" type="text" placeholder="Last Name">
+                    </div>
+                    <div id="btnSec">
+                        <button onclick="getData()">SUBMIT</button>
+                    </div>
+
+
+
+                </div>
+            </div>
+
+        </div>
+</body>
+<script>
+
+    function clickForMsg() {
+        const getId = document.getElementById('pushMsg').innerHTML = 'welcome to the world of javascript'
+    }
+
+
+    function getData() {
+        const firstname = document.getElementById('firstName').value
+        const middletname = document.getElementById('middleName').value
+        const lastname = document.getElementById('lastName').value
+
+        alert(`This First Name : ${firstname} , This is Middle Name : ${middletname} , This is Last Name : ${lastname}`)
+    }
+
+
+</script>
+
+</html>
